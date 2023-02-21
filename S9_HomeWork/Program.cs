@@ -169,6 +169,24 @@ internal class Program
         System.Console.WriteLine($"Функции Аккермана равна: {result}.");
       }
 
+      //7. Написать программу возведения числа А в целую стень B.
+      if (answer1 == 7)
+      {
+        int n = Proverca_chisla("Введите число для возведения в степень: ");
+        int m = Proverca_chisla("Введите целую степнь: ");
+        long kvadrat = 1;
+        for(int i = 0; i < m; i++)
+          kvadrat = kvadrat * n;
+        System.Console.WriteLine($"Возведения числа {n} в степень: {kvadrat} .");
+      }
+
+      //8. Написать программу показывающие первые N чисел, для которых каждое следующее равно сумме двух предыдущих. 
+      // Первые два элемента последовательности задаются пользователем.
+      if (answer1 == 8)
+      {
+        
+      }
+
       //Конец тела задач    
       System.Console.Write("Нажмите <Enter> для продолжения... ");
       while (System.Console.ReadKey().Key != System.ConsoleKey.Enter) { }
