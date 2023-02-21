@@ -101,12 +101,20 @@ internal class Program
       if (answer1 == 1)
       {
         int n = Proverca_chisla("Введите до какого число вывести натуральные числа: ");
-        for(int i=0;i<n+1;i+=2)
+        for(int i=1;i<n+1;i++)
           System.Console.Write($"{i} ");
         System.Console.WriteLine("");
       }
 
-      
+      //2. Показать натуральные числа от N до 1, N задано.
+      if (answer1 == 2)
+      {
+        int n = Proverca_chisla("Введите до какого число вывести натуральные числа: ");
+        for(int i=n;i > 0;i--)
+          System.Console.Write($"{i} ");
+        System.Console.WriteLine("");
+      }
+
       //Конец тела задач    
       System.Console.Write("Нажмите <Enter> для продолжения... ");
       while (System.Console.ReadKey().Key != System.ConsoleKey.Enter) { }
