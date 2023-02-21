@@ -136,6 +136,18 @@ internal class Program
       System.Console.WriteLine($"Cумму элементов от M до N равна: {sum}.");
       }
 
+      //5. Найти сумму цифр числа.
+      if (answer1 == 5)
+      {
+        int chislo = Proverca_chisla("Введите число для определения суммы цифр числа: ");
+          int sum = 0; 
+          while (chislo > 0)
+          {
+            sum = sum + chislo % 10;
+            chislo = chislo /10;
+          }
+        System.Console.WriteLine($"Cумму цифр числа: {sum}.");
+      }
 
       //Конец тела задач    
       System.Console.Write("Нажмите <Enter> для продолжения... ");
