@@ -125,6 +125,18 @@ internal class Program
         System.Console.WriteLine("");
       }
 
+      //4. Найти сумму элементов от M до N, N и M заданы.
+      if (answer1 == 4)
+      {
+      int m = Proverca_chisla("Введите от какого число нужны вывести натуральные числа: ");
+      int n = Proverca_chisla("Введите до какого число вывести натуральные числа: ");
+      int sum=0;
+      for(int i=m;i<n;i++)
+          sum+=i;
+      System.Console.WriteLine($"Cумму элементов от M до N равна: {sum}.");
+      }
+
+
       //Конец тела задач    
       System.Console.Write("Нажмите <Enter> для продолжения... ");
       while (System.Console.ReadKey().Key != System.ConsoleKey.Enter) { }
