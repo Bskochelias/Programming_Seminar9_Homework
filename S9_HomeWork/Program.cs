@@ -101,7 +101,7 @@ internal class Program
       if (answer1 == 1)
       {
         int n = Proverca_chisla("Введите до какого число вывести натуральные числа: ");
-        for(int i=1;i<n+1;i++)
+        for(int i=1;i<n;i++)
           System.Console.Write($"{i} ");
         System.Console.WriteLine("");
       }
@@ -111,6 +111,16 @@ internal class Program
       {
         int n = Proverca_chisla("Введите до какого число вывести натуральные числа: ");
         for(int i=n;i > 0;i--)
+          System.Console.Write($"{i} ");
+        System.Console.WriteLine("");
+      }
+
+      //3. Показать натуральные числа от M до N, N и M заданы.
+      if (answer1 == 3)
+      {
+      int m = Proverca_chisla("Введите от какого число нужны вывести натуральные числа: ");
+      int n = Proverca_chisla("Введите до какого число вывести натуральные числа: ");
+      for(int i=m;i<n;i++)
           System.Console.Write($"{i} ");
         System.Console.WriteLine("");
       }
