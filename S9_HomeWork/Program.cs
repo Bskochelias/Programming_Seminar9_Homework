@@ -27,7 +27,7 @@ internal class Program
         }
     }
 
-    //Создание одномерного массива с случайными числами
+  /*  //Создание одномерного массива с случайными числами
     int[] CreateMass1d(int n, int min, int max)
     {
       int[] Matrix = new int[n];
@@ -43,7 +43,7 @@ internal class Program
         for (int j = 0; j < Matrix.GetLength(1); j++)
           Matrix[i, j] = new Random().Next(min, max);
       return Matrix;
-    }
+    }*/
 
     //Печать одномерного массива
     void PrintMass1d(int[] Matrix)
@@ -53,7 +53,7 @@ internal class Program
       System.Console.WriteLine();
     }
     //Печать двухмерного массива
-    void PrintMass2d(int[,] Matrix)
+   /* void PrintMass2d(int[,] Matrix)
     {
       for (int i = 0; i < Matrix.GetLength(0); i++)
       {
@@ -61,7 +61,7 @@ internal class Program
           System.Console.Write($"{Matrix[i, j]} ");
         System.Console.WriteLine();
       }
-    }
+    }*/
 
     ulong Akerman(ulong n, ulong m)
     {
@@ -184,7 +184,17 @@ internal class Program
       // Первые два элемента последовательности задаются пользователем.
       if (answer1 == 8)
       {
-        
+        int lenght = Proverca_chisla("Введите длинну: ");
+        int n = Proverca_chisla("Введите первый элемент: ");
+        int m = Proverca_chisla("Введите второй элемент: ");
+        int [] maxtrix = new int [lenght];
+        maxtrix[0]= n;
+        maxtrix[1]= m;
+        for(int i = 0; i < maxtrix.Length-2; i++)
+          {
+            maxtrix[i+2]= maxtrix[i]+ maxtrix[i+1];
+          }
+        PrintMass1d(maxtrix);
       }
 
       //Конец тела задач    
