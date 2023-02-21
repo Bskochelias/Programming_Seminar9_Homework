@@ -63,6 +63,17 @@ internal class Program
       }
     }
 
+    ulong Akerman(ulong n, ulong m)
+    {
+      if (n == 0)
+        return m + 1;
+      else
+        if ((n != 0) && (m == 0))
+          return Akerman(n - 1, 1);
+        else
+          return Akerman(n - 1, Akerman(n, m - 1));
+    }
+
     int answer1 = 0;
     string? answer2;
     do
@@ -147,6 +158,15 @@ internal class Program
             chislo = chislo /10;
           }
         System.Console.WriteLine($"Cумму цифр числа: {sum}.");
+      }
+
+      //6. Написать программу вычисления функции Аккермана.
+      if (answer1 == 6)
+      {
+        int n = Proverca_chisla("Введите число N: ");
+        int m = Proverca_chisla("Введите число M: ");
+        ulong result = Akerman(Convert.ToUInt64(n),Convert.ToUInt64(m));
+        System.Console.WriteLine($"Функции Аккермана равна: {result}.");
       }
 
       //Конец тела задач    
